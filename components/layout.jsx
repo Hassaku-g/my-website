@@ -13,10 +13,10 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <header style={{ position: "sticky", top: "0", width: "100%", borderBottom: "1px solid #efefef" }}>
+      <header style={{ position: "sticky", top: "0", zIndex: "100", width: "100%", borderBottom: "1px solid #efefef" }}>
         <div className="container" style={{ position: "relative", padding: "0 20px", backgroundColor: "white" }}>
           <div className="header-navigation-wrap" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "64px" }}>
-            <Link className="logo" href="/">
+            <Link className="logo" href="/" scroll={false}>
               <Image src="/next.svg" alt="alt" width={100} height={40} priority />
             </Link>
             <button style={{ position: "relative", width: "40px", height: "40px", background: "transparent", border: "none" }} onClick={handle} className={`main-menu-toggle ${active ? "open" : ""}`}>
@@ -41,7 +41,13 @@ export default function Layout({ children }) {
         </div>
       </header>
       <main>
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ duration: 0.4, type: "easeInOut" }} style={{ padding: "40px 20px" }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.4, ease: [0.165, 0.84, 0.44, 1], y: { duration: 0.6 } }}
+          style={{ padding: "40px 20px" }}
+        >
           {children}
         </motion.div>
       </main>
