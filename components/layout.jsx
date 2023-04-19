@@ -56,26 +56,36 @@ export default function Layout({ children }) {
             </button>
           </div>
           <div className={`header-navigation-main ${active ? "open" : ""}`}>
-            <nav style={{ display: "flex", flexDirection: "column" }}>
+            <nav style={{ display: "flex", flexDirection: "column", justifyContent: "left" }}>
               <Link href="/" scroll={false} legacyBehavior>
-                <a style={{ padding: "5px 20px", borderBottom: "1px solid #efefef", color: "#0070f3" }}>home</a>
+                <a onClick={handle} style={{ padding: "10px 40px", borderBottom: "1px solid #efefef", color: "black" }}>
+                  home
+                </a>
               </Link>
               <Link href="/works" scroll={false} legacyBehavior>
-                <a style={{ padding: "5px 20px", borderBottom: "1px solid #efefef", color: "#0070f3" }}>works</a>
+                <a onClick={handle} style={{ padding: "10px 40px", borderBottom: "1px solid #efefef", color: "black" }}>
+                  works
+                </a>
               </Link>
               <Link href="/posts" scroll={false} legacyBehavior>
-                <a style={{ padding: "5px 20px", color: "#0070f3" }}>posts</a>
+                <a onClick={handle} style={{ padding: "10px 40px", color: "black" }}>
+                  posts
+                </a>
               </Link>
             </nav>
           </div>
         </div>
       </header>
-      <main>
+      <main style={{ minHeight: "calc(100vh - 65px - 60px)" }}>
         <motion.div initial="initial" animate="show" exit="exit" variants={variants} style={{ padding: "40px 20px" }}>
           {children}
         </motion.div>
       </main>
-      <footer>f</footer>
+      <footer style={{ display: "flex", alignItems: "center", height: "60px", borderTop: "1px solid #efefef", backgroundColor: "white" }}>
+        <p style={{ padding: "0 20px" }}>
+          <small style={{ fontSize: "11px", color: "#888" }}>2023 &copy; daichi mishima</small>
+        </p>
+      </footer>
     </>
   );
 }

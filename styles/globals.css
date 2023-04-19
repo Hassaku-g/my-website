@@ -82,14 +82,17 @@ ul {
 
 .header-navigation-main {
   position: absolute;
-  top: 64px;
+  top: 60px;
   right: 20px;
-  display: none;
   border: 1px solid #efefef;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .header-navigation-main.open {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
