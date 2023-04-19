@@ -11,6 +11,36 @@ export default function Layout({ children }) {
     setActive(!active);
   }
 
+  const variants = {
+    initial: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        ease: [0.165, 0.84, 0.44, 1],
+        opacity: { duration: 0.6 },
+        y: { duration: 0.4 },
+      },
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.165, 0.84, 0.44, 1],
+        opacity: { duration: 0.6 },
+        y: { duration: 0.4 },
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -10,
+      transition: {
+        ease: [0.165, 0.84, 0.44, 1],
+        opacity: { duration: 0.4 },
+        y: { duration: 0.6 },
+      },
+    },
+  };
+
   return (
     <>
       <header style={{ position: "sticky", top: "0", zIndex: "100", width: "100%", borderBottom: "1px solid #efefef" }}>
@@ -41,13 +71,7 @@ export default function Layout({ children }) {
         </div>
       </header>
       <main>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.4, ease: [0.165, 0.84, 0.44, 1], y: { duration: 0.6 } }}
-          style={{ padding: "40px 20px" }}
-        >
+        <motion.div initial="initial" animate="show" exit="exit" variants={variants} style={{ padding: "40px 20px" }}>
           {children}
         </motion.div>
       </main>
