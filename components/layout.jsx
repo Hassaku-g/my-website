@@ -17,8 +17,8 @@ export default function Layout({ children }) {
       y: 10,
       transition: {
         ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.6 },
-        y: { duration: 0.4 },
+        opacity: { duration: 0.4 },
+        y: { duration: 0.2 },
       },
     },
     show: {
@@ -26,8 +26,8 @@ export default function Layout({ children }) {
       y: 0,
       transition: {
         ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.6 },
-        y: { duration: 0.4 },
+        opacity: { duration: 0.4 },
+        y: { duration: 0.2 },
       },
     },
     exit: {
@@ -35,8 +35,8 @@ export default function Layout({ children }) {
       y: -10,
       transition: {
         ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.4 },
-        y: { duration: 0.6 },
+        opacity: { duration: 0.2 },
+        y: { duration: 0.4 },
       },
     },
   };
