@@ -46,9 +46,11 @@ export default function Layout({ children }) {
       <header style={{ position: "sticky", top: "0", zIndex: "100", width: "100%", borderBottom: "1px solid #efefef" }}>
         <div className="container" style={{ position: "relative", padding: "0 20px", backgroundColor: "white" }}>
           <div className="header-navigation-wrap" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "64px" }}>
-            <Link className="logo" href="/" scroll={false}>
-              <Image src="/logo.svg" alt="alt" width={30} height={30} priority style={{ fill: "blue" }} />
-            </Link>
+            <h1>
+              <Link className="logo" href="/" scroll={false} style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "30px", height: "auto" }}>
+                <Image src="/logo.svg" alt="alt" width={100} height={100} priority />
+              </Link>
+            </h1>
             <button style={{ position: "relative", width: "40px", height: "40px", background: "transparent", border: "none" }} onClick={handle} className={`main-menu-toggle ${active ? "open" : ""}`}>
               <span style={{ position: "absolute", top: "13px", left: "10px", width: "20px", height: "1px", backgroundColor: "black" }}></span>
               <span style={{ position: "absolute", top: "20px", left: "10px", width: "20px", height: "1px", backgroundColor: "black" }}></span>

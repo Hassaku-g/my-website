@@ -1,14 +1,41 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
   return (
     <Layout>
-      <h1>Hello World</h1>
-      <p>Hey, I'm a Senior Software Engineer at Company. I enjoy working with Next.js and crafting beautiful front-end experiences.</p>
-      <p>This portfolio is built with Next.js and a library called Nextra. It allows you to write Markdown and focus on the content of your portfolio.</p>
-      <p>Deploy your own in a few minutes.</p>
+      <section style={{ padding: "60px 20px", backgroundColor: "black", color: "#d0d0d0" }}>
+        <h1 style={{ fontSize: "40px", color: "#d0d0d0" }}>
+          <Typewriter
+            options={{
+              strings: ["Hello World", "ようこそ"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h1>
+        <p style={{ paddingTop: "40px" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus et voluptatum, ab inventore assumenda impedit, incidunt consectetur aut rem provident maiores fugiat sint quia corporis
+          cupiditate tempore doloremque. Odio, dolor.
+        </p>
+      </section>
+      <section style={{ padding: "60px 20px", backgroundColor: "black", color: "#d0d0d0" }}>
+        <h1 style={{ fontSize: "40px", color: "#d0d0d0" }}>
+          <Typewriter
+            options={{
+              strings: ["Hello World", "ようこそ"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h1>
+        <p style={{ paddingTop: "40px" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus et voluptatum, ab inventore assumenda impedit, incidunt consectetur aut rem provident maiores fugiat sint quia corporis
+          cupiditate tempore doloremque. Odio, dolor.
+        </p>
+      </section>
     </Layout>
   );
 }
