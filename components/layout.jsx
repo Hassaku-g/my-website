@@ -77,7 +77,7 @@ export default function Layout({ children }) {
         </div>
       </header>
       <main style={{ minHeight: "calc(100vh - 65px - 60px)" }}>
-        <motion.div initial="initial" animate="show" exit="exit" variants={variants} style={{ padding: "40px 20px" }}>
+        <motion.div initial="initial" animate="show" exit="exit" variants={variants}>
           {children}
         </motion.div>
       </main>
