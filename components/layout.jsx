@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import Typewriter from "typewriter-effect";
 
 export default function Layout({ children }) {
   const [active, setActive] = useState(false);
@@ -43,40 +44,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <header style={{ position: "sticky", top: "0", zIndex: "100", width: "100%", background: "linear-gradient(to bottom, rgba(0,0,0,1)80%, rgba(0,0,0,0) )" }}>
-        {/* <div className="container" style={{ position: "relative", padding: "0 20px", backgroundColor: "white" }}>
-          <div className="header-navigation-wrap" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "64px" }}>
-            <h1>
-              <Link className="logo" href="/" scroll={false} style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "30px", height: "auto" }}>
-                <Image src="/logo.svg" alt="alt" width={100} height={100} priority />
-              </Link>
-            </h1>
-            <button style={{ position: "relative", width: "40px", height: "40px", background: "transparent", border: "none" }} onClick={handle} className={`main-menu-toggle ${active ? "open" : ""}`}>
-              <span style={{ position: "absolute", top: "13px", left: "10px", width: "20px", height: "1px", backgroundColor: "black" }}></span>
-              <span style={{ position: "absolute", top: "20px", left: "10px", width: "20px", height: "1px", backgroundColor: "black" }}></span>
-              <span style={{ position: "absolute", top: "27px", left: "10px", width: "20px", height: "1px", backgroundColor: "black" }}></span>
-            </button>
-          </div>
-          <div className={`header-navigation-main ${active ? "open" : ""}`}>
-            <nav style={{ display: "flex", flexDirection: "column", justifyContent: "left" }}>
-              <Link href="/" scroll={false} legacyBehavior>
-                <a onClick={handle} style={{ padding: "10px 40px", borderBottom: "1px solid #efefef", color: "black" }}>
-                  home
-                </a>
-              </Link>
-              <Link href="/works" scroll={false} legacyBehavior>
-                <a onClick={handle} style={{ padding: "10px 40px", borderBottom: "1px solid #efefef", color: "black" }}>
-                  works
-                </a>
-              </Link>
-              <Link href="/posts" scroll={false} legacyBehavior>
-                <a onClick={handle} style={{ padding: "10px 40px", color: "black" }}>
-                  posts
-                </a>
-              </Link>
-            </nav>
-          </div>
-        </div> */}
+      <header style={{ position: "sticky", top: "0", zIndex: "100", width: "100%", height: "60px", background: "black" }}>
         <div
           className="header-inner"
           style={{
@@ -84,18 +52,19 @@ export default function Layout({ children }) {
             flexDirection: "column",
             maxWidth: "800px",
             margin: "0 auto",
-            padding: "20px 20px 40px",
+            padding: "60px 20px 0",
           }}
         >
-          <h1>
-            <Link href="/" style={{ fontSize: "24px", color: "#d0d0d0" }}>
-              Logo
-            </Link>
-          </h1>
+          <h1 style={{ fontSize: "30px", color: "#d0d0d0", filter: "drop-shadow(0 0 0.3rem #ffffff70)" }}>About</h1>
           <nav>
             <ul style={{ display: "flex", justifyContent: "end", alignItems: "center", paddingTop: "10px" }}>
               <li>
-                <Link href="/works" style={{ fontSize: "13px", color: "#d0d0d0", textDecoration: "underline" }}>
+                <Link href="/" style={{ fontSize: "13px", color: "#d0d0d0", textDecoration: "underline" }}>
+                  about
+                </Link>
+              </li>
+              <li>
+                <Link href="/works" style={{ marginLeft: "20px", fontSize: "13px", color: "#d0d0d0", textDecoration: "underline" }}>
                   works
                 </Link>
               </li>
