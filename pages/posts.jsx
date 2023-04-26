@@ -5,7 +5,7 @@ import Layout from "@/components/layout";
 
 export default function posts({ allPostsData }) {
   return (
-    <Layout>
+    <Layout pageName="Posts">
       <h1>Posts</h1>
       <ul>
         {allPostsData.map(({ id, date, title }) => (

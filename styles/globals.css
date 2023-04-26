@@ -4,14 +4,12 @@
   margin: 0;
 }
 
-html,
 body {
-  max-width: 100vw;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
   font-family: system-ui, sans-serif;
-}
-
-body {
-  color: black;
+  color: white;
   background-color: black;
 }
 
@@ -22,7 +20,7 @@ img {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -34,29 +32,4 @@ ul {
   html {
     color-scheme: dark;
   }
-}
-
-.main-menu-toggle {
-  color: white;
-}
-
-.main-menu-toggle.open {
-  color: blue;
-}
-
-.header-navigation-main {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  border: 1px solid #efefef;
-  border-radius: 5px;
-  background-color: white;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.header-navigation-main.open {
-  visibility: visible;
-  opacity: 1;
 }

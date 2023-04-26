@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 
 export default function Work({ workData }) {
   return (
-    <Layout>
+    <Layout pageName={workData.title}>
       <Head>
         <title>{workData.title}</title>
       </Head>

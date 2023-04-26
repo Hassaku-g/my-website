@@ -2,15 +2,10 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import Typewriter from "typewriter-effect";
+import { useRouter } from "next/router";
 
-export default function Layout({ children }) {
-  const [active, setActive] = useState(false);
-
-  function handle() {
-    setActive(!active);
-  }
+export default function Layout({ children, pageName }) {
+  const router = useRouter();
 
   const variants = {
     initial: {
@@ -44,32 +39,47 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <header style={{ position: "sticky", top: "0", zIndex: "100", width: "100%", height: "60px", background: "black" }}>
+      <header>
         <div
           className="header-inner"
           style={{
             display: "flex",
             flexDirection: "column",
-            maxWidth: "800px",
-            margin: "0 auto",
-            padding: "60px 20px 0",
+            paddingTop: "80px",
+            paddingBottom: "32px",
           }}
         >
-          <h1 style={{ fontSize: "30px", color: "#d0d0d0", filter: "drop-shadow(0 0 0.3rem #ffffff70)" }}>About</h1>
+          <motion.h1 style={{ marginBottom: "24px", fontSize: "30px", color: "#d0d0d0", filter: "drop-shadow(0 0 0.3rem #ffffff70)" }} initial="initial" animate="show" exit="exit" variants={variants}>
+            {pageName}
+          </motion.h1>
           <nav>
-            <ul style={{ display: "flex", justifyContent: "end", alignItems: "center", paddingTop: "10px" }}>
+            <ul style={{ display: "flex", justifyContent: "end", alignItems: "center" }}>
               <li>
-                <Link href="/" style={{ fontSize: "13px", color: "#d0d0d0", textDecoration: "underline" }}>
+                <Link href="/" style={router.pathname === "/" ? { textDecoration: "none", color: "#7d7d7d", pointerEvents: "none" } : { textDecoration: "underline", color: "#d0d0d0" }}>
                   about
                 </Link>
               </li>
               <li>
-                <Link href="/works" style={{ marginLeft: "20px", fontSize: "13px", color: "#d0d0d0", textDecoration: "underline" }}>
+                <Link
+                  href="/works"
+                  style={
+                    router.pathname === "/works"
+                      ? { marginLeft: "12px", textDecoration: "none", color: "#7d7d7d", pointerEvents: "none" }
+                      : { marginLeft: "12px", textDecoration: "underline", color: "#d0d0d0" }
+                  }
+                >
                   works
                 </Link>
               </li>
               <li>
-                <Link href="/posts" style={{ marginLeft: "20px", fontSize: "13px", color: "#d0d0d0", textDecoration: "underline" }}>
+                <Link
+                  href="/posts"
+                  style={
+                    router.pathname === "/posts"
+                      ? { marginLeft: "12px", textDecoration: "none", color: "#7d7d7d", pointerEvents: "none" }
+                      : { marginLeft: "12px", textDecoration: "underline", color: "#d0d0d0" }
+                  }
+                >
                   posts
                 </Link>
               </li>
@@ -82,11 +92,6 @@ export default function Layout({ children }) {
           {children}
         </motion.div>
       </main>
-      <footer style={{ display: "flex", alignItems: "center", height: "60px", borderTop: "1px solid #efefef", backgroundColor: "white" }}>
-        <p style={{ padding: "0 20px" }}>
-          <small style={{ fontSize: "11px", color: "#888" }}>2023 &copy; daichi mishima</small>
-        </p>
-      </footer>
     </>
   );
 }
