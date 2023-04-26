@@ -43,8 +43,8 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <header style={{ position: "sticky", top: "0", zIndex: "100", width: "100%", borderBottom: "1px solid #efefef" }}>
-        <div className="container" style={{ position: "relative", padding: "0 20px", backgroundColor: "white" }}>
+      <header style={{ position: "sticky", top: "0", zIndex: "100", width: "100%", background: "linear-gradient(to bottom, rgba(0,0,0,1)80%, rgba(0,0,0,0) )" }}>
+        {/* <div className="container" style={{ position: "relative", padding: "0 20px", backgroundColor: "white" }}>
           <div className="header-navigation-wrap" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "64px" }}>
             <h1>
               <Link className="logo" href="/" scroll={false} style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "30px", height: "auto" }}>
@@ -76,6 +76,36 @@ export default function Layout({ children }) {
               </Link>
             </nav>
           </div>
+        </div> */}
+        <div
+          className="header-inner"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: "800px",
+            margin: "0 auto",
+            padding: "20px 20px 40px",
+          }}
+        >
+          <h1>
+            <Link href="/" style={{ fontSize: "24px", color: "#d0d0d0" }}>
+              Logo
+            </Link>
+          </h1>
+          <nav>
+            <ul style={{ display: "flex", justifyContent: "end", alignItems: "center", paddingTop: "10px" }}>
+              <li>
+                <Link href="/works" style={{ fontSize: "13px", color: "#d0d0d0", textDecoration: "underline" }}>
+                  works
+                </Link>
+              </li>
+              <li>
+                <Link href="/posts" style={{ marginLeft: "20px", fontSize: "13px", color: "#d0d0d0", textDecoration: "underline" }}>
+                  posts
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
       <main style={{ minHeight: "calc(100vh - 65px - 60px)" }}>
