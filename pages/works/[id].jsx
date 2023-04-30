@@ -31,7 +31,7 @@ export default function Work({ workData }) {
         <title>{workData.title}</title>
       </Head>
       <div>
-        <Image src={workData.image} alt="alt" width={400} height={200} priority />
+        <Image src={workData.image} alt="alt" width={400} height={200} priority style={{ width: "100%" }} />
       </div>
       {workData.title}
       <br />

@@ -7,7 +7,37 @@ import { useRouter } from "next/router";
 export default function Layout({ children, pageName }) {
   const router = useRouter();
 
-  const variants = {
+  const variants1 = {
+    initial: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        ease: [0.165, 0.84, 0.44, 1],
+        opacity: { duration: 0.4 },
+        y: { duration: 0.2 },
+      },
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.165, 0.84, 0.44, 1],
+        opacity: { duration: 0.4 },
+        y: { duration: 0.2 },
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        ease: [0.165, 0.84, 0.44, 1],
+        opacity: { duration: 0.2 },
+        y: { duration: 0.4 },
+      },
+    },
+  };
+
+  const variants2 = {
     initial: {
       opacity: 0,
       y: 10,
@@ -49,9 +79,11 @@ export default function Layout({ children, pageName }) {
             paddingBottom: "32px",
           }}
         >
-          <motion.h1 style={{ marginBottom: "24px", fontSize: "30px", color: "#d0d0d0", filter: "drop-shadow(0 0 0.3rem #ffffff70)" }} initial="initial" animate="show" exit="exit" variants={variants}>
-            {pageName}
-          </motion.h1>
+          <div style={{ overflowY: "hidden", marginBottom: "24px" }}>
+            <motion.h1 style={{ fontSize: "30px", color: "#d0d0d0", filter: "drop-shadow(0 0 0.3rem #ffffff70)" }} initial="initial" animate="show" exit="exit" variants={variants1}>
+              {pageName}
+            </motion.h1>
+          </div>
           <nav>
             <ul style={{ display: "flex", justifyContent: "end", alignItems: "center" }}>
               <li>
@@ -88,7 +120,7 @@ export default function Layout({ children, pageName }) {
         </div>
       </header>
       <main style={{ minHeight: "calc(100vh - 65px - 60px)" }}>
-        <motion.div initial="initial" animate="show" exit="exit" variants={variants}>
+        <motion.div initial="initial" animate="show" exit="exit" variants={variants2}>
           {children}
         </motion.div>
       </main>
