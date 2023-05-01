@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Inter var";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/fonts/Inter-roman.latin.var.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Inter var";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/fonts/Inter-italic.latin.var.woff2) format("woff2");
+  font-named-instance: "Italic";
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,9 +24,30 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
-  font-family: system-ui, sans-serif;
-  color: white;
-  background-color: black;
+  background-color: #0c0c0d;
+  font-family: "Inter var", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-feature-settings: "case" 1, "cpsp" 1, "dlig" 1, "cv01" 1, "cv02", "cv03" 1, "cv04" 1;
+  font-variation-settings: "wght" 450;
+  font-variant: common-ligatures contextual;
+  color: #e4e4e7;
+  letter-spacing: -0.02em;
+}
+
+b,
+strong,
+h3,
+h4,
+h5,
+h6 {
+  font-variation-settings: "wght" 650;
+}
+h1 {
+  font-variation-settings: "wght" 850;
+}
+h2 {
+  font-variation-settings: "wght" 750;
 }
 
 img {
