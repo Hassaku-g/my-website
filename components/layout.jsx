@@ -80,7 +80,8 @@ export default function Layout({ children, pageName, work, post }) {
         >
           {post | work ? (
             <motion.div initial="initial" animate="show" exit="exit" variants={variants2}>
-              <Link href="/posts">← Back to lists</Link>
+              {post && <Link href="/posts">← Back to Posts</Link>}
+              {work && <Link href="/works">← Back to Works</Link>}
             </motion.div>
           ) : (
             <nav>
