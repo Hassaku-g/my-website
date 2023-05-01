@@ -10,11 +10,9 @@ export default function posts({ allPostsData }) {
         {allPostsData.map(({ id, date, title }) => (
           <li key={id} style={{ padding: "20px 0", borderBottom: "1px solid #333" }}>
             <Link href={`/posts/${id}`}>
+              <small style={{ display: "inline-block", paddingBottom: "10px", fontSize: "12px", color: "#7d7d7d" }}>{date}</small>
               <p style={{ paddingBottom: "10px", fontSize: "16px", color: "white" }}>{title}</p>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <small style={{ fontSize: "12px", color: "#7d7d7d" }}>{date}</small>
-                <span style={{ fontSize: "12px", color: "white" }}>view more →</span>
-              </div>
+              <span style={{ fontSize: "12px", color: "white" }}>view more →</span>
             </Link>
           </li>
         ))}

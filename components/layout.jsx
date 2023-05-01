@@ -122,7 +122,7 @@ export default function Layout({ children, pageName, work, post }) {
       <main style={{ minHeight: "calc(100vh - 65px - 60px)" }}>
         <motion.div initial="initial" animate="show" exit="exit" variants={variants2}>
           <div style={{ overflowY: "hidden", marginBottom: "40px", paddingTop: "40px" }}>
-            <motion.h1 style={{ fontSize: "30px", color: "#d0d0d0", filter: "drop-shadow(0 0 0.3rem #ffffff70)" }} initial="initial" animate="show" exit="exit" variants={variants1}>
+            <motion.h1 style={{ fontSize: "32px", color: "#fafafa" }} initial="initial" animate="show" exit="exit" variants={variants1}>
               {pageName}
             </motion.h1>
           </div>

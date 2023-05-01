@@ -9,14 +9,14 @@ export default function works({ allWorksData }) {
     <Layout pageName="Works">
       <ul>
         {allWorksData.map(({ id, date, title, image }) => (
-          <li key={id} style={{ borderBottom: "1px solid #1a1a1a" }}>
-            <Link href={`/works/${id}`} style={{ display: "flex", width: "100%", padding: "20px 0" }}>
-              <div style={{ display: "flex", justifyContent: "center", alignContent: "center", width: "100px", height: "100px", borderRadius: "6px", backgroundColor: "#1a1a1a", overflow: "hidden" }}>
-                {/* <Image src={image} alt="alt" width={600} height={400} priority /> */}
+          <li key={id} style={{ marginBottom: "20px", backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: "8px" }}>
+            <Link href={`/works/${id}`} style={{ width: "100%", padding: "20px 0" }}>
+              <div style={{ display: "flex", justifyContent: "center", alignContent: "center", height: "48vw", borderRadius: "6px", backgroundColor: "#1a1a1a", overflow: "hidden" }}>
+                <Image src={image} alt="alt" width={600} height={400} priority />
               </div>
-              <div style={{ width: "calc(100% - 120px)", marginLeft: "20px", padding: "10px 0" }}>
-                <p style={{ fontSize: "14px", fontWeight: "600", color: "#d0d0d0" }}>{title}</p>
-                <span style={{ display: "block", marginTop: "20px", fontSize: "12px", color: "#a0a0a0", textAlign: "right" }}>詳しく見る</span>
+              <div style={{ padding: "20px" }}>
+                <p style={{ fontSize: "13px", fontWeight: "700", color: "#fafafa" }}>ログイン作成</p>
+                <span style={{ display: "flex", justifyContent: "flex-end", fontSize: "13px", color: "#a1a1aa" }}>view more →</span>
               </div>
             </Link>
           </li>
