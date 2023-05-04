@@ -1,135 +1,95 @@
-import { motion } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
-export default function Layout({ children, pageName, work, post }) {
+export default function layout({ title, children, post }) {
   const router = useRouter();
-
-  const variants1 = {
-    initial: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.4 },
-        y: { duration: 0.2 },
-      },
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.4 },
-        y: { duration: 0.2 },
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 10,
-      transition: {
-        ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.2 },
-        y: { duration: 0.4 },
-      },
-    },
-  };
-
-  const variants2 = {
-    initial: {
-      opacity: 0,
-      y: 10,
-      transition: {
-        ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.4 },
-        y: { duration: 0.2 },
-      },
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.4 },
-        y: { duration: 0.2 },
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: -10,
-      transition: {
-        ease: [0.165, 0.84, 0.44, 1],
-        opacity: { duration: 0.2 },
-        y: { duration: 0.4 },
-      },
-    },
-  };
+  const paths = ["/", "/works", "/posts"];
 
   return (
     <>
-      <header>
-        <div
-          className="header-inner"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "80px",
-          }}
-        >
-          {post | work ? (
-            <motion.div initial="initial" animate="show" exit="exit" variants={variants2}>
-              {post && <Link href="/posts">← Back to Posts</Link>}
-              {work && <Link href="/works">← Back to Works</Link>}
-            </motion.div>
-          ) : (
-            <nav>
-              <ul style={{ display: "flex", justifyContent: "end", alignItems: "center" }}>
-                <li>
-                  <Link href="/" style={router.pathname === "/" ? { textDecoration: "none", color: "#a1a1aa", pointerEvents: "none" } : { textDecoration: "underline", color: "#e4e4e7" }}>
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/works"
-                    style={
-                      router.pathname === "/works"
-                        ? { marginLeft: "12px", textDecoration: "none", color: "#a1a1aa", pointerEvents: "none" }
-                        : { marginLeft: "12px", textDecoration: "underline", color: "#e4e4e7" }
-                    }
-                  >
-                    Works
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/posts"
-                    style={
-                      router.pathname === "/posts"
-                        ? { marginLeft: "12px", textDecoration: "none", color: "#a1a1aa", pointerEvents: "none" }
-                        : { marginLeft: "12px", textDecoration: "underline", color: "#e4e4e7" }
-                    }
-                  >
-                    Posts
-                  </Link>
-                </li>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <header className="header">
+        <div className="header-inner">
+          <div className="user-icon">
+            <Image src="/card-5.png" alt="Picture of the author" width="100" height="100" />
+          </div>
+          <p className="user-name">Daichi Mishima</p>
+          <div className="user-comment">
+            <p className="user-comment__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <nav>
+            {!post && (
+              <ul className="nav-list">
+                {paths.map((path, i) => (
+                  <li className="nav-item" key={i}>
+                    <Link
+                      onClick={(e) => {
+                        e.preventDefault();
+                        router.push(`${path}`, undefined, { scroll: false });
+                      }}
+                      href={`${path}`}
+                      className={`nav-link ${router.pathname === path ? "is-active" : ""}`}
+                    >
+                      {i == 0 && "about"}
+                      {i == 1 && "works"}
+                      {i == 2 && "posts"}
+                    </Link>
+                  </li>
+                ))}
               </ul>
-            </nav>
-          )}
+            )}
+            {post && (
+              <ul className="nav-list">
+                {paths.map((path, i) => (
+                  <li className="nav-item" key={i}>
+                    <Link
+                      onClick={(e) => {
+                        e.preventDefault();
+                        router.push(`${path}`, undefined, { scroll: false });
+                      }}
+                      href={`${path}`}
+                      className={`nav-link ${router.pathname.replace("/[id]", "") === path ? "is-active" : ""}`}
+                    >
+                      {i == 0 && "about"}
+                      {i == 1 && "works"}
+                      {i == 2 && "posts"}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </nav>
         </div>
       </header>
-      <main style={{ minHeight: "calc(100vh - 65px - 60px)" }}>
-        <motion.div initial="initial" animate="show" exit="exit" variants={variants2}>
-          <div style={{ overflowY: "hidden", marginBottom: "40px", paddingTop: "40px" }}>
-            <motion.h1 style={{ fontSize: "32px", color: "#fafafa" }} initial="initial" animate="show" exit="exit" variants={variants1}>
-              {pageName}
-            </motion.h1>
-          </div>
+      <motion.main className="main" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.1 }}>
+        <article>
+          {post && (
+            <Link
+              onClick={(e) => {
+                e.preventDefault();
+                router.push(`${router.pathname.replace("/[id]", "")}`, undefined, { scroll: false });
+              }}
+              href={`${router.pathname.replace("/[id]", "")}`}
+            >
+              ← Back to posts
+            </Link>
+          )}
+          <section>
+            <h1>{title}</h1>
+          </section>
           {children}
-        </motion.div>
-      </main>
+        </article>
+      </motion.main>
+      <footer className="footer">
+        <p className="footer-copy">
+          <small>Copyright &copy; 2023 daichi mishima. All rights reserved.</small>
+        </p>
+      </footer>
     </>
   );
 }

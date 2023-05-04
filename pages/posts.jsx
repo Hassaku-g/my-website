@@ -1,25 +1,8 @@
-import Head from "next/head";
 import Link from "next/link";
+import Layout from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
-import Layout from "@/components/layout";
-
-export default function posts({ allPostsData }) {
-  return (
-    <Layout pageName="Posts">
-      <ul>
-        {allPostsData.map(({ id, date, title }) => (
-          <li key={id} style={{ padding: "20px 0", borderBottom: "1px solid #333" }}>
-            <Link href={`/posts/${id}`}>
-              <small style={{ display: "inline-block", paddingBottom: "10px", fontSize: "12px", color: "#7d7d7d" }}>{date}</small>
-              <p style={{ paddingBottom: "10px", fontSize: "16px", color: "white" }}>{title}</p>
-              <span style={{ fontSize: "12px", color: "white" }}>view more →</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </Layout>
-  );
-}
+import { useRouter } from "next/router";
+import styles from "../styles/Posts.module.scss";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -28,4 +11,32 @@ export async function getStaticProps() {
       allPostsData,
     },
   };
+}
+
+export default function posts({ allPostsData }) {
+  const router = useRouter();
+
+  return (
+    <Layout title="Posts">
+      <div className={styles.list}>
+        <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li className={styles.item} key={id}>
+              <Link
+                className={styles.post}
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(`/posts/${id}`, undefined, { scroll: false });
+                }}
+                href={`/posts/${id}`}
+              >
+                <p className={styles.post_title}>{title}</p>
+                <small className={styles.post_date}>{date}</small>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
+  );
 }
