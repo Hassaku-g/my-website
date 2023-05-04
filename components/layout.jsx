@@ -16,7 +16,7 @@ export default function layout({ title, children, post }) {
       <header className="header">
         <div className="header-inner">
           <div className="user-icon">
-            <Image src="/card-5.png" alt="Picture of the author" width="100" height="100" />
+            <Image src="/card-5.png" alt="Picture of the author" width="100" height="100" priority={true} />
           </div>
           <p className="user-name">Daichi Mishima</p>
           <div className="user-comment">
