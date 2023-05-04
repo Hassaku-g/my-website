@@ -60,10 +60,8 @@ h1 {
   width: 64px;
   height: 64px;
   margin-bottom: 8px;
-  border: 1px solid var(--color-border-gray);
   border-radius: 50%;
-  //   background: var(--bg-gray);
-  background: url(../public/card-5.png);
+  background: url(../public/card-5.png) no-repeat center center / cover;
   overflow: hidden;
 
   img {
