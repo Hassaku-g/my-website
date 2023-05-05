@@ -34,6 +34,7 @@ export default function Work({ workData }) {
                 width="100"
                 height="100"
             /> */}
+      <a href={workData.url}>{workData.url}</a>
       <Date dateString={workData.date} />
       <div dangerouslySetInnerHTML={{ __html: workData.contentHtml }} />
     </Layout>
