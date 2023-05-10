@@ -1,5 +1,5 @@
 import Head from "next/head";
-import "@/styles/globals.scss";
+import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 
 export default function App({ Component, pageProps, router }) {

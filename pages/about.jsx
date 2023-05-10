@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Layout>
+      <Layout title="About">
         <section>
           <p>
             ○○大学文学部、英文学科から参りました、○○と申します。私は昔から読書が好きで、読書好きが高じて文学部への入学を決めました。現在は外国文学の古典について学んでおり、語学力はもちろん、日本人にはない考え方、価値観、文化の違いなどを学び、日々驚きと楽しみでいっぱいです。
