@@ -24,22 +24,14 @@ export default function works({ allWorksData }) {
         <main className="mt-6">
           <section>
             <h1 className="font-bold text-3xl font-serif">Works</h1>
-            <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">ポートフォリサイトへようこそ！</p>
             {allWorksData.map(({ id, title, date }) => (
               <article key={id}>
-                <Link
-                  onClick={(e) => {
-                    e.preventDefault();
-                    router.push(`/works/${id}`, undefined, { scroll: false });
-                  }}
-                  href={`/works/${id}`}
-                >
+                <Link href={`/works/${id}`} scroll={false} style={{ display: "inline-block", marginBottom: "40px" }}>
                   <div>
                     <Image src="/card-5.png" alt="alt" width="600" height="200" priority={true} />
                   </div>
                   <div>
-                    <p>{title}</p>
-                    <span>{date}</span>
+                    <p style={{ paddingTop: "10px", fontSize: "13px", color: "AppWorkspace" }}>{title}</p>
                   </div>
                 </Link>
               </article>

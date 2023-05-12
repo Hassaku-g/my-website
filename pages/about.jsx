@@ -17,7 +17,9 @@ export default function Home() {
         <main className="mt-6">
           <section>
             <h1 className="font-bold text-3xl font-serif">About Me</h1>
-            <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">ポートフォリサイトへようこそ！</p>
+            <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">
+              やあ、私はリーです。ほとどの人は私のことをオンラインでleerobとして知っています。私は現在、Vercelの開発者エクスペリエンス担当副社長を努めており、開発者関係チームとドキュメントチームを率いています。私はVercelおよびNext.jsコミュニティの教育と成長に重点を置いています。私は音楽、写真、ビデオ撮影、そしてもちろんコーディングなど、多くのクリエイティブな活動に情熱を注いでいます。このような興味の組み合わせが最終的に私が開発者コミュニティを構築するという現在の役割につながったのです。私はウェブの講師区が大好きです。単一のHTMLファイルのような単純なものから、大規模なNext.js
+            </p>
             {/* <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
             <Image alt={name} className="rounded-full grayscale" src={avatar} placeholder="blur" width={100} priority />
             <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">

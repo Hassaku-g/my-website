@@ -14,7 +14,9 @@ export default function Home() {
         <main className="mt-6">
           <section>
             <h1 className="font-bold text-3xl font-serif">Mishima Daichi</h1>
-            <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">ポートフォリサイトへようこそ！</p>
+            <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">
+              はじめまして、三島大地と申します。私はフロントエンド開発に興味を持っており、React,Next.jsを中心にウェブ開発に関する技術の習得に日々取り組んでいます。このポートフォリオサイトを通して」私の人柄やスキルを少しでも知っていただけると思います。ごゆっくりご覧ください。
+            </p>
             {/* <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
             <Image alt={name} className="rounded-full grayscale" src={avatar} placeholder="blur" width={100} priority />
             <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">

@@ -14,12 +14,7 @@ export default function layout({ title, children, post }) {
         <title>{title}</title>
       </Head>
       <motion.main className="main" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.1 }}>
-        <article>
-          <section>
-            <h1>{title}</h1>
-          </section>
-          {children}
-        </article>
+        <article>{children}</article>
       </motion.main>
       <footer className="footer">
         <p className="footer-copy">
