@@ -8,9 +8,7 @@ export default function App({ Component, pageProps, router }) {
     //   <Component {...pageProps} key={router.asPath} />
     // </AnimatePresence>
     <>
-      <Head>
-        <link rel="preload" href="/fonts/Inter-roman.latin.var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      </Head>
+      <Head>{/* <link rel="preload" href="/fonts/Inter-roman.latin.var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /> */}</Head>
       <Component {...pageProps} />
     </>
   );

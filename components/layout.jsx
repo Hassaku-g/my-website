@@ -15,17 +15,6 @@ export default function layout({ title, children, post }) {
       </Head>
       <motion.main className="main" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.1 }}>
         <article>
-          {post && (
-            <Link
-              onClick={(e) => {
-                e.preventDefault();
-                router.push(`${router.pathname.replace("/[id]", "")}`, undefined, { scroll: false });
-              }}
-              href={`${router.pathname.replace("/[id]", "")}`}
-            >
-              ← Back to posts
-            </Link>
-          )}
           <section>
             <h1>{title}</h1>
           </section>
