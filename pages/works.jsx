@@ -2,10 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/layout";
 import { getSortedWorksData } from "../lib/works";
-import { useRouter } from "next/router";
-import Navbar from "../components/navbar";
 
+// getStaticProps関数を呼び出すとpropsによって返された値を使用して事前にページを生成します。
+// この関数はpropsオブジェクトのallWorksDataを返します。
 export async function getStaticProps() {
+  // importしたgetSortedWorksData関数をallWorksDataに格納
   const allWorksData = getSortedWorksData();
   return {
     props: {
@@ -14,31 +15,20 @@ export async function getStaticProps() {
   };
 }
 
-export default function works({ allWorksData }) {
-  const router = useRouter();
-
+export default function Works({ allWorksData }) {
   return (
-    <>
-      <div className="flex flex-col md:flex-row">
-        <Navbar />
-        <main className="mt-6">
-          <section>
-            <h1 className="font-bold text-3xl font-serif">Works</h1>
-            {allWorksData.map(({ id, title, date }) => (
-              <article key={id}>
-                <Link href={`/works/${id}`} scroll={false} style={{ display: "inline-block", marginBottom: "40px" }}>
-                  <div>
-                    <Image src="/card-5.png" alt="alt" width="600" height="200" priority={true} />
-                  </div>
-                  <div>
-                    <p style={{ paddingTop: "10px", fontSize: "13px", color: "AppWorkspace" }}>{title}</p>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </section>
-        </main>
-      </div>
-    </>
+    <Layout>
+      <h1>Works</h1>
+      {allWorksData.map(({ id, title, date, src }) => (
+        <article key={id}>
+          <Link href={`/works/${id}`} scroll={false}>
+            <div className="flex align-center justify-center w-full h-56 border border-neutral-800 rounded bg-neutral-900 overflow-hidden">
+              <Image className="object-cover" src={src} alt="alt" width={500} height={400} />
+            </div>
+            <p className="mt-2 text-sm text-neutral-200">{title}</p>
+          </Link>
+        </article>
+      ))}
+    </Layout>
   );
 }
