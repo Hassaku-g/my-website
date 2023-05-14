@@ -1,7 +1,8 @@
 ---
-title: "Next.jsのチュートリアル"
+title: "【デモサイト】LP"
 date: "2020-01-01"
 src: "/company.png"
+url: "https://hassaku-g.github.io/Company/"
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.

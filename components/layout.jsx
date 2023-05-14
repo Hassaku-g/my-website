@@ -5,7 +5,7 @@ export default function layout({ children }) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className="mt-12">{children}</main>
     </>
   );
 }

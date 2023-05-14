@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Layout from "../../components/layout";
 import { getAllWorkIds, getWorkData } from "../../lib/works";
 
@@ -34,6 +35,7 @@ export default function Work({ workData }) {
         ← Back
       </Link>
       <h1 className="mb-5 text-3xl font-bold">{workData.title}</h1>
+      {workData.src ? <Image src={workData.src} alt={workData.title} width={500} height={400} priority /> : null}
       <div dangerouslySetInnerHTML={{ __html: workData.contentHtml }} />
       <span className="mt-2 text-sm text-neutral-400">{workData.language}</span>
     </Layout>
