@@ -1,7 +1,9 @@
 ---
-title: "ログインページ作成"
+title: "Sobolon"
+type: "LP coding"
+description: "ウェブ制作学習サービス「デイトラ」でLPを作成致しました。"
 date: "2020-01-01"
-image: "/vue.png"
+image: "/work2.png"
 url: "https://hassaku-g.github.io/Company/"
 ---
 

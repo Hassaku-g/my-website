@@ -1,7 +1,9 @@
 ---
-title: "【デモサイト】LP"
-date: "2020-01-01"
-src: "/company.png"
+title: "The Company"
+type: "LP coding"
+description: "ウェブ制作学習サービス「デイトラ」でLPを作成致しました。"
+date: "2023-05-16"
+image: "/work1.png"
 url: "https://hassaku-g.github.io/Company/"
 ---
 

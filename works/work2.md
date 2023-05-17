@@ -1,7 +1,10 @@
 ---
-title: "Next.jsのチュートリアル"
+title: "Login System"
+type: "Next.js/Auth.js"
+description: "NextjsとAuth.jsでログイン機能を作成しました"
 date: "2020-01-01"
-image: "/vue.png"
+image: "/work3.png"
+url: "https://hassaku-g.github.io/Company/"
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
