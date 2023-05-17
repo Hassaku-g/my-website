@@ -4,7 +4,7 @@ export default function About() {
   return (
     <Layout>
       <section>
-        <h1>About Me</h1>
+        <h1 className="text-white">About Me</h1>
         <p className="my-5 text-neutral-800 dark:text-neutral-200">
           Hey, I'm Lee. Most folks know me as <b>leerob</b> online.
         </p>

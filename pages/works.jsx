@@ -18,7 +18,7 @@ export async function getStaticProps() {
 export default function Works({ allWorksData }) {
   return (
     <Layout>
-      <h1>Works</h1>
+      <h1 className="text-white">Works</h1>
       <div className="sm:grid-cols-3 gap-6 grid">
         {allWorksData.map(({ id, title, image, url, description, type }) => (
           <div key={id}>
@@ -32,7 +32,7 @@ export default function Works({ allWorksData }) {
               </div>
               <div className="flex justify-between flex-col flex-1 p-4">
                 <div>
-                  <h3 className="text-base font-medium">{title}</h3>
+                  <h3 className="text-base font-medium text-white">{title}</h3>
                   <p className="card-description mt-2 text-sm text-neutral-400">{description}</p>
                 </div>
                 <div className="flex justify-between align-center mt-3.5">

@@ -34,8 +34,32 @@ export default function Work({ workData }) {
       <Link className="inline-block mb-5 py-1 px-2 bg-neutral-800 rounded" href="/works" scroll={false}>
         ← Back
       </Link>
-      <h1 className="mb-5 text-3xl font-bold">{workData.title}</h1>
-      {workData.image ? <Image src={workData.image} alt={workData.title} width={500} height={400} priority /> : null}
+      <div class="c">
+        <div class="ca">
+          <a class="cb" href={workData.url} rel="noopener" target="_blank">
+            <svg
+              data-testid="geist-icon"
+              fill="none"
+              height="20"
+              shape-rendering="geometricPrecision"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="20"
+              style={{ color: "currentColor" }}
+            >
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14L21 3"></path>
+            </svg>
+            <p class="cc">View Demo</p>
+          </a>
+        </div>
+        {workData.image ? <Image className="object-cover" src={workData.image} alt={workData.title} width={800} height={450} priority /> : null}
+      </div>
+      <h1 className="my-5 text-white">{workData.title}</h1>
       <div className="prose" dangerouslySetInnerHTML={{ __html: workData.contentHtml }} />
       <span className="mt-2 text-sm text-neutral-400">{workData.language}</span>
     </Layout>
