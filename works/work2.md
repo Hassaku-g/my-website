@@ -1,7 +1,7 @@
 ---
 title: "Login System"
 type: "Next.js/Auth.js"
-description: "NextjsとAuth.jsでログイン機能を作成しました"
+description: "NextjsとAuth.jsで"
 date: "2020-01-01"
 image: "/work3.png"
 url: "https://hassaku-g.github.io/Company/"

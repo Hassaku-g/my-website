@@ -30,7 +30,7 @@ export default function Works({ allWorksData }) {
               <div style={{ height: "180px" }} className="flex bg-neutral-900">
                 {image ? <Image style={{ inset: "0px" }} className="object-cover" src={image} alt="alt" width={500} height={400} priority /> : null}
               </div>
-              <div className="flex justify-between flex-col p-4">
+              <div className="flex justify-between flex-col flex-1 p-4">
                 <div>
                   <h3 className="text-base font-medium">{title}</h3>
                   <p className="card-description mt-2 text-sm text-neutral-400">{description}</p>

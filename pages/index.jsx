@@ -6,13 +6,15 @@ export default function Index() {
       <Layout>
         <section>
           <h1 className="font-bold text-3xl">Mshima Daichi</h1>
-          <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">
-            Hey, I'm Lee. I'm the <b>VP of Developer Experience at Vercel</b> where my team helps developers build a faster web.
+          <p className="my-5 text-neutral-800 dark:text-neutral-200">
+            はじめまして、私は未経験のエンジニアです。これまでの職務経験は、エンジニアリングには直接関係のない分野でしたが、常に技術に興味を持ち、学ぶことに熱心でした。そこで、自己学習によってプログラミングの基礎知識を身につけ、現在はWebアプリケーションの開発に興味を持っています。
           </p>
           <div></div>
-          <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
-            I'm a Next.js contributor and help lead our open-source communities. I'm passionate about frontend development and have created courses on React, Next.js, and web development. I'm an
-            advisor and investor in early stage startups.
+          <p className="my-5 text-neutral-800 dark:text-neutral-200">
+            具体的には、HTML,CSS,JavaScriptなどのプログラミング言語を学習しており、簡単なWebアプリケーションの作成に挑戦しています。また、オンラインのコミュニティや書籍などから学びを深めることも積極的に取り組んでいます。
+          </p>
+          <p className="my-5 text-neutral-800 dark:text-neutral-200">
+            私はチャレンジ精神旺盛で、新しいことに取り組むことが大好きです。エンジニアリングの世界には、常に新しい技術や手法が生まれているため、この分野に身を置くことが将来的なキャリアアップにつながると考えています。これからも、日々医の学習に励みながら、エンジニアとして成長していきたいと思っています。
           </p>
           <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
             <li>

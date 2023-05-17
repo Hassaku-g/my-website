@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background: #0a0a0a;
+}
+
 h1 {
   margin-bottom: 32px;
   font-size: 30px;
@@ -20,7 +24,15 @@ h1 {
   margin-bottom: 1.25em;
 }
 
-.card {
-  -webkit-line-clamp: 2;
+.prose ul {
+  list-style: disc;
+  margin: revert;
+  padding: revert;
+}
+
+.card-description {
+  display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }

@@ -1,7 +1,7 @@
 ---
 title: "Sobolon"
 type: "LP coding"
-description: "ウェブ制作学習サービス「デイトラ」でLPを作成致しました。"
+description: "ウェブ制作学習サービス"
 date: "2020-01-01"
 image: "/work2.png"
 url: "https://hassaku-g.github.io/Company/"

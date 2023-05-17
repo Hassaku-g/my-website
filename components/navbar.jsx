@@ -38,7 +38,7 @@ export default function Navbar() {
                   <Link
                     key={path}
                     href={path}
-                    className={clsx("transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle", {
+                    className={clsx("transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle text-base font-medium", {
                       "text-neutral-500": !isActive,
                       "text-neutral-200": isActive,
                     })}
