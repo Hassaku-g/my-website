@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 export default function Work({ workData }) {
   return (
     <Layout>
-      <Link className="inline-block mb-5 py-1 px-2 bg-neutral-800 rounded text-sm text-neutral-400" href="/works" scroll={false}>
+      <Link className="inline-block mb-5 py-1 px-2 text-sm text-neutral-400" href="/works" scroll={false}>
         ← Back to Works
       </Link>
       <div class="c">
