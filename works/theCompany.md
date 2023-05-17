@@ -3,12 +3,18 @@ title: "The Company"
 type: "LP coding"
 description: "ウェブ制作学習サービス「デイトラ」でLPを作成致しました。"
 date: "2023-05-16"
-image: "/work1.png"
+image: ""
 url: "https://hassaku-g.github.io/Company/"
 ---
 
 ウェブ制作学習サービス「デイトラ」にて LP サイトのコーディングを行いました。
 一度はあの光を見たんだよ
+
+# This is an H1
+
+## This is an H2
+
+###### This is an H6
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 

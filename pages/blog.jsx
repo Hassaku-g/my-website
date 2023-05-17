@@ -19,7 +19,7 @@ export default function posts({ allPostsData }) {
         <Link className="flex flex-col space-y-1 mb-4" href={`/blog/${id}`} scroll={false} key={id}>
           <div className="w-full flex flex-col">
             <p className="text-white">{title}</p>
-            <span className="font-mono text-sm text-neutral-500 tracking-tighter">{date}</span>
+            <span className="text-sm text-neutral-500 tracking-tighter">{date}</span>
           </div>
         </Link>
       ))}
