@@ -3,7 +3,7 @@ title: "The Company"
 type: "LP coding"
 description: "ウェブ制作学習サービス「デイトラ」でLPを作成致しました。"
 date: "2023-05-16"
-image: ""
+image: "/work3.png"
 url: "https://hassaku-g.github.io/Company/"
 ---
 
