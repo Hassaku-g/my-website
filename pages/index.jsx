@@ -5,7 +5,7 @@ export default function Index() {
     <>
       <Layout>
         <section>
-          <h1 className="text-white">Mshima Daichi</h1>
+          <h1 className="text-white">Mshima </h1>
           <p className="my-6">
             はじめまして、私は未経験のエンジニアです。これまでの職務経験は、エンジニアリングには直接関係のない分野でしたが、常に技術に興味を持ち、学ぶことに熱心でした。そこで、自己学習によってプログラミングの基礎知識を身につけ、現在はWebアプリケーションの開発に興味を持っています。
           </p>
