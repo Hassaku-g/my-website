@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Layout from "../components/layout";
 
 export default function Index() {
@@ -6,7 +7,9 @@ export default function Index() {
       <Layout>
         <section>
           <h1 className="text-white">Mshima Daichi</h1>
-          <div className="w-24 h-24 bg-neutral-900 rounded-full"></div>
+          <div className="w-24 h-24 bg-neutral-900 rounded-full overflow-hidden">
+            <Image src="/portfolio.jpg" alt="Mishima Daichi" width={200} height={200} priority />
+          </div>
           <p className="my-6">
             はじめまして、三島大地と申します。
             <br />
