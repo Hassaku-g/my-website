@@ -1,13 +1,13 @@
 ---
-title: "The Company"
+title: "Sobolon"
 type: "LP coding"
 description: "ウェブ制作学習サービス「デイトラ」でLPを作成致しました。"
-date: "2023-05-16"
-image: "/work3.png"
-url: "https://hassaku-g.github.io/Company/"
+date: "2023-05-24"
+image: "/sobolon.png"
+url: "https://hassaku-g.github.io/Sobolon/"
 ---
 
-ウェブ制作学習サービス「デイトラ」にて LP サイトのコーディングを行いました。
+ウェブ制作学習サービス「デイトラ」にて LP サイトのコーディングを行いました。s
 
 # This is an H1
 

@@ -34,18 +34,18 @@ export default function Work({ workData }) {
       <Link className="inline-block mb-5 py-1 px-2       text-sm text-neutral-400" href="/works" scroll={false}>
         ← Back to Works
       </Link>
-      <div class="c">
-        <div class="ca">
-          <a class="cb" href={workData.url} rel="noopener" target="_blank">
+      <div className="c">
+        <div className="ca">
+          <a className="cb" href={workData.url} rel="noopener" target="_blank">
             <svg
               data-testid="geist-icon"
               fill="none"
               height="20"
-              shape-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
               viewBox="0 0 24 24"
               width="20"
               style={{ color: "currentColor" }}
@@ -54,13 +54,13 @@ export default function Work({ workData }) {
               <path d="M15 3h6v6"></path>
               <path d="M10 14L21 3"></path>
             </svg>
-            <p class="cc">View Demo</p>
+            <p className="cc">View Demo</p>
           </a>
         </div>
         {workData.image ? (
           <Image
             className="object-cover"
-            style={{ position: "absolute", height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }}
+            style={{ position: "absolute", height: "auto", width: "auto", inset: "0px", objectFit: "cover", color: "transparent" }}
             src={workData.image}
             alt={workData.title}
             width={800}
