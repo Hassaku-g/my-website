@@ -60,11 +60,11 @@ export default function Work({ workData }) {
         {workData.image ? (
           <Image
             className="object-cover"
-            style={{ position: "absolute", height: "auto", width: "auto", inset: "0px", objectFit: "cover", color: "transparent" }}
+            style={{ position: "absolute", height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }}
             src={workData.image}
             alt={workData.title}
-            width={800}
-            height={450}
+            width={640}
+            height={360}
             priority
           />
         ) : null}

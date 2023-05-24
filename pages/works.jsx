@@ -19,7 +19,7 @@ export default function Works({ allWorksData }) {
   return (
     <Layout>
       <h1 className="text-white">Works</h1>
-      <div className="sm:grid-cols-3 gap-6 grid">
+      <div className="sm:grid-cols-2 gap-6 grid">
         {allWorksData.map(({ id, title, image, url, description, type }) => (
           <div key={id}>
             <Link
@@ -28,7 +28,7 @@ export default function Works({ allWorksData }) {
               className="flex justify-between flex-col max-w-xs h-full	mx-auto border-neutral-800 rounded overflow-hidden"
             >
               <div style={{ height: "180px" }} className="flex bg-neutral-900">
-                {image ? <Image style={{ inset: "0px" }} className="object-cover" src={image} alt="alt" width={500} height={400} priority /> : null}
+                {image ? <Image style={{ inset: "0px" }} className="object-cover" src={image} alt="alt" width={320} height={180} priority /> : null}
               </div>
               <div className="flex justify-between flex-col flex-1 p-4">
                 <div>
