@@ -31,8 +31,8 @@ export async function getStaticPaths() {
 export default function Work({ workData }) {
   return (
     <Layout>
-      <Link className="inline-block mb-5 py-1 px-2       text-sm text-neutral-400" href="/works" scroll={false}>
-        ← Back to Works
+      <Link className="inline-block mb-5 py-1 px-2 bg-neutral-800 rounded" href="/works" scroll={false}>
+        ← Back
       </Link>
       <div className="c">
         <div className="ca">
@@ -60,7 +60,7 @@ export default function Work({ workData }) {
         {workData.image ? (
           <Image
             className="object-cover"
-            style={{ position: "absolute", height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }}
+            style={{ height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }}
             src={workData.image}
             alt={workData.title}
             width={640}
