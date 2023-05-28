@@ -3,7 +3,7 @@ title: "Next.js Tutorial"
 type: "Next.js"
 description: "Next.js公式サイトのチュートリアル"
 date: "2023-05-24"
-image: ""
+image: "/next.js-sample.png"
 url: "https://nextjs-tutorial-ten-neon.vercel.app/"
 ---
 

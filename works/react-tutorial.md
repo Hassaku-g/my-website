@@ -3,7 +3,7 @@ title: "React Tutorial"
 type: "React"
 description: "react.dev公式サイトの三目並べゲーム"
 date: "2023-05-24"
-image: ""
+image: "/react-tutorial.png"
 url: "https://react-tutorial-bice.vercel.app/"
 ---
 
