@@ -22,7 +22,7 @@ export default function Works({ allWorksData }) {
       <div className="sm:grid-cols-2 gap-6 grid">
         {allWorksData.map(({ id, title, image, url, description, type }) => (
           <div key={id}>
-            <Link href={`/works/${id}`} style={{ boxShadow: "0 0 0 1px #3d3d3d" }} className="flex justify-between flex-col h-full	mx-auto border-neutral-800 rounded overflow-hidden">
+            <Link href={`/works/${id}`} scroll={false} style={{ boxShadow: "0 0 0 1px #3d3d3d" }} className="flex justify-between flex-col h-full	mx-auto border-neutral-800 rounded overflow-hidden">
               <div className="flex bg-neutral-900">{image ? <Image style={{ inset: "0px" }} className="object-cover w-full" src={image} alt="alt" width={320} height={180} priority /> : null}</div>
               <div className="flex justify-between flex-col flex-1 p-4">
                 <div>
