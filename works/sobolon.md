@@ -5,19 +5,21 @@ description: "ウェブ制作学習サービス「デイトラ」でLPを作成�
 date: "2023-05-24"
 image: "/sobolon.png"
 url: "https://hassaku-g.github.io/Sobolon/"
+code: "https://github.com/Hassaku-g/Sobolon"
 ---
 
-ウェブ制作学習サービス「デイトラ」にて LP サイトのコーディングを行いました。s
+- Styling: Sass
+- Deployment: Github Pages
 
-# This is an H1
+## How
 
-## This is an H2
+具体的には以下のようなことを行いました。
 
-###### This is an H6
+- 環境構築(Sass ファイルのコンパイル設定)
+- 変数
+- @mixin
+- 入れ子
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+## End
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+Sass を使用するための環境構築に苦戦しました。コンパイル設定が難しく、.scss ファイルから.css ファイルを生成させることに時間がかかりました。

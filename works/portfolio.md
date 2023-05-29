@@ -5,19 +5,18 @@ description: "三島大地のポートフォリオサイト"
 date: "2023-05-16"
 image: "/portfolio.png"
 url: "https://my-website-hassaku-g.vercel.app/"
+code: "https://github.com/Hassaku-g/my-website"
 ---
 
-ウェブ制作学習サービス「デイトラ」にて LP サイトのコーディングを行いました。
+- Famework: Next.js
+- Styling: Tailwind CSS
+- Deployment: Vercel
 
-# This is an H1
+## 技術スタックの選択
 
-## This is an H2
-
-###### This is an H6
-
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
-
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+- **Next.js**
+  SPA のサイトを作りたい
+- **Tailwind CSS**
+  クラスは直感的に操作でき、ドキュメント化されているため簡単です。
+- **Vercel**
+  デプロイが簡単、github のリポジトリに公開可能
