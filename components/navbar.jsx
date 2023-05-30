@@ -10,8 +10,8 @@ const navItems = {
   "/works": {
     name: "works",
   },
-  "/blog": {
-    name: "blog",
+  "/posts": {
+    name: "posts",
   },
 };
 
@@ -19,8 +19,8 @@ export default function Navbar() {
   let pathname = usePathname() || "/";
   if (pathname.includes("/works/")) {
     pathname = "/works";
-  } else if (pathname.includes("/blog/")) {
-    pathname = "/blog";
+  } else if (pathname.includes("/posts/")) {
+    pathname = "/posts";
   }
 
   return (
