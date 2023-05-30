@@ -3,6 +3,12 @@ title: "ポートフォリオサイトの使用技術スタック"
 date: "2023-05-17"
 ---
 
+```Javascript:bash
+function hello(){
+　return "hello world!";
+}
+```
+
 SPA (Single Page Aplication) を実現するために **React** のフレームワーク **Next.js** を採用しました。
 Next.js 公式サイトのチュートリアルを最後まで修了させ、機能やデザインを拡張して SPA を実現しました。
 

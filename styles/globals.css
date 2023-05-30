@@ -90,6 +90,7 @@ h2 {
   margin-left: 8px;
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 .prose :where(pre):not(:where([class~="not-prose"] *)) {
