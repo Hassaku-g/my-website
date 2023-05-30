@@ -7,7 +7,7 @@ import Head from "next/head";
 import Link from "next/link";
 import path from "path";
 import CustomLink from "../../components/CustomLink";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 
 // Custom components/renderers to pass to MDX.
