@@ -8,14 +8,10 @@ url: "https://react-tutorial-bice.vercel.app/"
 code: "https://github.com/Hassaku-g/react-tutorial"
 ---
 
-- Styling: Tailwind CSS
+## これはなに？
+
+React 公式ドキュメントに用意されたチュートリアルで作成した ○X ゲームです。
+Next.js でサイト構築するために、React の概要を学習するために構築しました。
+
+- Framework: Next.js
 - Deployment: Vercel
-
-## How
-
-- Props
-- State
-
-## End
-
-Props での値の受け渡しが難しかった。

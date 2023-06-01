@@ -8,14 +8,9 @@ url: "https://nextjs-tutorial-ten-neon.vercel.app/"
 code: "https://github.com/Hassaku-g/nextjs-tutorial"
 ---
 
-- Styling: Tailwind CSS
-- Deployment: Vercel
+## これはなに？
 
-## How
+Next.js 公式ドキュメントのチュートリアルで作成しました。
+ポートフォリオサイトで SPA を実装するために、Next.js の全体像を確認するために構築しました。
 
-- getStaticProps
-- getStaticPaths
-
-## End
-
-Props での値の受け渡しが難しかった。
+- Framework: Next.js
