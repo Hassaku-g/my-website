@@ -15,7 +15,7 @@ export default function Posts({ posts }) {
             <Link className="flex flex-col space-y-1 mb-4" as={`/posts/${post.filePath.replace(/\.mdx?$/, "")}`} href={`/posts/[slug]`}>
               <div className="w-full flex flex-col">
                 <p className="text-white">{post.data.title}</p>
-                <span className="text-sm text-neutral-500 tracking-tighter">{post.data.description}</span>
+                <span className="text-sm text-neutral-500 tracking-tighter">{post.data.date}</span>
               </div>
             </Link>
           </li>
