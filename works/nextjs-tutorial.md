@@ -8,7 +8,7 @@ url: "https://nextjs-tutorial-ten-neon.vercel.app/"
 code: "https://github.com/Hassaku-g/nextjs-tutorial"
 ---
 
-## これはなに？
+## 概要
 
 Next.js 公式ドキュメントのチュートリアルで作成しました。
 ポートフォリオサイトで SPA を実装するために、Next.js の全体像を確認するために構築しました。

@@ -8,7 +8,7 @@ url: "https://hassaku-g.github.io/Sobolon/"
 code: "https://github.com/Hassaku-g/Sobolon"
 ---
 
-## これはなに？
+## 概要
 
 ウェブ制作学習サービス「デイトラ」で用意された Sass の演習課題です。
 Styling に Sass を使用し、デモサイトを構築しました。

@@ -8,7 +8,7 @@ url: "https://my-website-hassaku-g.vercel.app/"
 code: "https://github.com/Hassaku-g/my-website"
 ---
 
-## これはなに？
+## 概要
 
 ポートフォリオサイトを作成しました。
 SPA サイトを実装するためにフレームワークに Next.js を使用してサイトを構築しました。
