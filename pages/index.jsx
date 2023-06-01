@@ -11,15 +11,39 @@ export default function Index() {
             <Image src="/portfolio.jpg" alt="Mishima Daichi" width={200} height={200} priority />
           </div>
           <p className="my-6">はじめまして、三島大地と申します。 このサイトでは私について、手がけた作品、ブログを紹介しています。 ごゆっくりとご覧ください。</p>
-          <hr />
-          <p className="my-6">
-            現職インハウスコーダーでウェブサイトのパフォーマンス向上を意識して業務をする中で、パフォーマンス工場には設計や構築が大切なことを知りました。
-            <br />
-            設計や構築について学習していく中で興味を持つようになり、フロントエンドエンジニアとして見た目や構築、設計に携わりたいと思うようになりました。
-          </p>
-          <p className="my-6">
-            私はチャレンジ精神旺盛で、新しいことに取り組むことが大好きです。エンジニアリングの世界には、常に新しい技術や手法が生まれているため、この分野に身を置くことが将来的なキャリアアップにつながると考えています。これからも、日々の学習に励みながら、エンジニアとして成長していきたいと思っています。
-          </p>
+          <table className="my-6">
+            <thead>
+              <tr>
+                <th>Profile</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="/docs/app/building-your-application/routing">なぜエンジニアになりたいのか？</a>
+                </td>
+                <td>
+                  現職インハウスコーダーでウェブサイトのパフォーマンス向上を意識して業務をする中で、パフォーマンス工場には設計や構築が大切なことを知りました。
+                  設計や構築について学習していく中で興味を持つようになり、フロントエンドエンジニアとして見た目や構築、設計に携わりたいと思うようになりました。
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/docs/app/building-your-application/data-fetching">How to learning</a>
+                </td>
+                <td>
+                  Udemyの講座でWeb開発の基礎を学び、xxアプリを自分で実際に作りました。開発をする中で、共通のパーツを使っていないとその後の改善がしづらくなることを実感し、メンテナス性を意識しながら開発するようになりました。（制作物のURLも記述しておく）
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/docs/app/building-your-application/styling">Future</a>
+                </td>
+                <td>開発業務は未経験ですが、前職でBtoBの営業を担当してきた経験を活かして、顧客対応もできるエンジニアになりたいと考えています。</td>
+              </tr>
+            </tbody>
+          </table>
           <a
             rel="noopener noreferrer"
             target="_blank"
