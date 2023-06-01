@@ -8,18 +8,19 @@ url: "https://hassaku-g.github.io/Sobolon/"
 code: "https://github.com/Hassaku-g/Sobolon"
 ---
 
-- Styling: Sass
-- Deployment: Github Pages
+## What
+
+Styling に Sass を使用し、デモサイトを構築。
+ウェブ制作学習サービス「デイトラ」で用意された Sass の演習課題です。
 
 ## How
 
-具体的には以下のようなことを行いました。
+- Styling: Sass
+- Deployment: Github Pages
+- Editer: VScode
 
-- 環境構築(Sass ファイルのコンパイル設定)
-- 変数
-- @mixin
-- 入れ子
+## 問題と改善
 
-## End
-
-Sass を使用するための環境構築に苦戦しました。コンパイル設定が難しく、.scss ファイルから.css ファイルを生成させることに時間がかかりました。
+Sass が反映されない
+→Sass が直接 style として反映されるものだと勘違いしており、.scss ファイルを読み込んでいることに気づいた。
+コンパイル設定を見直し、コンパイル後の.css ファイルを link で読み込むことで改善できた。
