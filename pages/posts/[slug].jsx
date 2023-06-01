@@ -26,14 +26,13 @@ const components = {
 export default function PostPage({ source, frontMatter }) {
   return (
     <Layout>
-      <header>
-        <nav>
-          <Link href="/posts">👈 Go back home</Link>
-        </nav>
-      </header>
+      <Link className="inline-block mb-5 py-1 px-2 bg-neutral-800 rounded" href="/posts" scroll={false}>
+        ← Back
+      </Link>
       <div className="post-header">
         <h1>{frontMatter.title}</h1>
         {frontMatter.description && <p className="description">{frontMatter.description}</p>}
+        {frontMatter.date && <p className="date">{frontMatter.date}</p>}
       </div>
       <main>
         <MDXRemote {...source} components={components} />
