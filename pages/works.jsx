@@ -3,10 +3,7 @@ import Image from "next/image";
 import Layout from "../components/layout";
 import { getSortedWorksData } from "../lib/works";
 
-// getStaticProps関数を呼び出すとpropsによって返された値を使用して事前にページを生成します。
-// この関数はpropsオブジェクトのallWorksDataを返します。
 export async function getStaticProps() {
-  // importしたgetSortedWorksData関数をallWorksDataに格納
   const allWorksData = getSortedWorksData();
   return {
     props: {
