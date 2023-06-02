@@ -6,11 +6,11 @@ export default function Index() {
     <>
       <Layout>
         <section>
-          <h1 className="text-white">Mshima Daichi</h1>
+          <h1 className="text-white">D.M</h1>
           <div className="w-24 h-24 bg-neutral-900 rounded-full overflow-hidden">
-            <Image src="/portfolio.jpg" alt="Mishima Daichi" width={200} height={200} priority />
+            <Image src="/portfolio.jpg" alt="D.M" width={200} height={200} priority />
           </div>
-          <p className="my-6">はじめまして、三島大地と申します。 このサイトでは私について、手がけた作品、ブログを紹介しています。 ごゆっくりとご覧ください。</p>
+          <p className="my-6">はじめまして。 このサイトでは私について、手がけた作品、ブログを紹介しています。 ごゆっくりとご覧ください。</p>
           <p className="my-6">
             現職で運用しているウェブサイトのパフォーマンス向上のために設計や構築について自主的に学習しました。
             その中で、モダンなフロントエンドの技術にとても魅力を感じ、私も一らから設計や構築に携わりたいと思いました。
