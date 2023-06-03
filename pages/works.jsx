@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/layout";
 import { getSortedWorksData } from "../lib/works";
@@ -15,6 +16,9 @@ export async function getStaticProps() {
 export default function Works({ allWorksData }) {
   return (
     <Layout>
+      <Head>
+        <title>Works | Portfolio</title>
+      </Head>
       <h1 className="text-white">Works</h1>
       <div className="sm:grid-cols-2 gap-6 grid">
         {allWorksData.map(({ id, title, image, url, description, type }) => (

@@ -13,4 +13,4 @@ code: "https://github.com/Hassaku-g/Company"
 ウェブ制作学習サービス「デイトラ」で用意された Sass の演習課題です。
 Styling に Sass を使用し、デモサイトを構築しました。
 
-- Styling: Sass
+- **Styling: Sass**

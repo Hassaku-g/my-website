@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
+import Head from "next/head";
 import path from "path";
 import Layout from "../components/layout";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
@@ -8,6 +9,9 @@ import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 export default function Posts({ posts }) {
   return (
     <Layout>
+      <Head>
+        <title>Posts | Portfolio</title>
+      </Head>
       <h1 className="text-white">Posts</h1>
       <ul>
         {posts.map((post) => (

@@ -1,10 +1,14 @@
 import Image from "next/image";
+import Head from "next/head";
 import Layout from "../components/layout";
 
 export default function Index() {
   return (
     <>
       <Layout>
+        <Head>
+          <title>Portfolio</title>
+        </Head>
         <section>
           <h1 className="text-white">D.Mishima</h1>
           <div className="w-24 h-24 bg-neutral-900 rounded-full overflow-hidden">
