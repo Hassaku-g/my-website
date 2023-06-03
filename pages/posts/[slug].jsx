@@ -5,20 +5,13 @@ import { serialize } from "next-mdx-remote/serialize";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import path from "path";
-import CustomLink from "../../components/CustomLink";
 import Layout from "../../components/layout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
 const components = {
-  a: CustomLink,
-  // It also works with dynamically-imported components, which is especially
-  // useful for conditionally loading components for certain routes.
-  // See the notes in README.md for more details.
+  Image,
   TestComponent: dynamic(() => import("../../components/TestComponent")),
   Head,
 };
@@ -26,6 +19,9 @@ const components = {
 export default function PostPage({ source, frontMatter }) {
   return (
     <Layout>
+      <Head>
+        <title>{frontMatter.title} | Portfolio</title>
+      </Head>
       <Link className="inline-block mb-5 py-1 px-2 bg-neutral-800 rounded" href="/posts" scroll={false}>
         ← Back
       </Link>
@@ -35,7 +31,9 @@ export default function PostPage({ source, frontMatter }) {
         {frontMatter.date && <p className="date">{frontMatter.date}</p>}
       </div>
       <main>
-        <MDXRemote {...source} components={components} />
+        <article className="prose">
+          <MDXRemote {...source} components={components} />
+        </article>
       </main>
 
       <style jsx>{`

@@ -1,9 +1,9 @@
 ---
 title: "Portfolio"
 type: "Next.js"
-description: "三島大地のポートフォリオサイト"
+description: "ポートフォリオサイト"
 date: "2023-05-16"
-image: "/portfolio.png"
+image: "/works_portfoilo.png"
 url: "https://my-website-hassaku-g.vercel.app/"
 code: "https://github.com/Hassaku-g/my-website"
 ---

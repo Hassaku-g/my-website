@@ -1,16 +1,11 @@
 import Link from "next/link";
 
-export default function CustomLink({ as, href, ...otherProps }) {
+export default function CustomLink({ href, children }) {
   return (
     <>
-      <Link as={as} href={href} legacyBehavior>
-        <a {...otherProps} />
-      </Link>
-      <style jsx>{`
-        a {
-          color: tomato;
-        }
-      `}</style>
+      <a href={href} ref="noopener noreferrer">
+        {children}
+      </a>
     </>
   );
 }

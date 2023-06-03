@@ -1,10 +1,10 @@
-export default function TestComponent({ name = "world" }) {
+export default function TestComponent({ name }) {
   return (
     <>
       <div>Hello, {name}!</div>
       <style jsx>{`
         div {
-          background-color: #111;
+          background-color: #333;
           border-radius: 0.5em;
           color: #fff;
           margin-bottom: 1.5em;

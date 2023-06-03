@@ -39,7 +39,6 @@ export default function Navbar() {
                       "text-neutral-500": !isActive,
                       "text-neutral-200": isActive,
                     })}
-                    scroll={false}
                   >
                     <span className="relative py-[5px] px-[10px]">
                       {name}

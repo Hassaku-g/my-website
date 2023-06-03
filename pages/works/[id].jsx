@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import Image from "next/image";
 import Layout from "../../components/layout";
 import { getAllWorkIds, getWorkData } from "../../lib/works";
@@ -31,6 +32,9 @@ export async function getStaticPaths() {
 export default function Work({ workData }) {
   return (
     <Layout>
+      <Head>
+        <title>{workData.title} | Portfolio</title>
+      </Head>
       <Link className="inline-block mb-5 py-1 px-2 bg-neutral-800 rounded" href="/works" scroll={false}>
         ← Back
       </Link>

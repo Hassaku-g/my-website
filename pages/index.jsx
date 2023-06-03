@@ -6,9 +6,9 @@ export default function Index() {
     <>
       <Layout>
         <section>
-          <h1 className="text-white">D.M</h1>
+          <h1 className="text-white">D.Mishima</h1>
           <div className="w-24 h-24 bg-neutral-900 rounded-full overflow-hidden">
-            <Image src="/portfolio.jpg" alt="D.M" width={200} height={200} priority />
+            <Image src="/portfolio.jpg" alt="プロフィール画像" width={200} height={200} priority />
           </div>
           <p className="my-6">はじめまして。 このサイトでは私について、手がけた作品、ブログを紹介しています。 ごゆっくりとご覧ください。</p>
           <p className="my-6">
@@ -20,7 +20,7 @@ export default function Index() {
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/Hassaku-g"
-            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+            className="flex w-full border border-gray-800 dark:border-neutral-800 rounded-lg px-4 py-3 no-underline items-center text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 bg-black transition-all justify-between"
           >
             <div className="flex items-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +31,7 @@ export default function Index() {
                   ></path>
                 </g>
               </svg>
-              <div className="ml-3">GitHub</div>
+              <div className="ml-3">Check my GitHub</div>
             </div>
             <svg className="mr-2" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z" fill="currentColor"></path>
