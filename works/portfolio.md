@@ -3,7 +3,7 @@ title: "Portfolio"
 type: "Next.js"
 description: "ポートフォリオサイト"
 date: "2023-05-16"
-image: "/works_portfoilo.png"
+image: "/work-portfolio.png"
 url: "https://my-website-hassaku-g.vercel.app/"
 code: "https://github.com/Hassaku-g/my-website"
 ---
