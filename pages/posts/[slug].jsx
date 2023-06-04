@@ -9,11 +9,13 @@ import Image from "next/image";
 import path from "path";
 import Layout from "../../components/layout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
+import rehypePrism from "rehype-prism-plus";
+import rehypeCodeTitles from "rehype-code-titles";
 
 const components = {
   Image,
+  CodeWrapper: dynamic(() => import("../../components/CodeWrapper")),
   TestComponent: dynamic(() => import("../../components/TestComponent")),
-  Head,
 };
 
 export default function PostPage({ source, frontMatter }) {
@@ -62,7 +64,7 @@ export const getStaticProps = async ({ params }) => {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
       remarkPlugins: [],
-      rehypePlugins: [],
+      rehypePlugins: [rehypeCodeTitles, rehypePrism],
     },
     scope: data,
   });

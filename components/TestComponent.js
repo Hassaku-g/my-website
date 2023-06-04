@@ -1,7 +1,7 @@
 export default function TestComponent({ name }) {
   return (
     <>
-      <div>Hello, {name}!</div>
+      <div className="border">Hello, {name}!</div>
       <style jsx>{`
         div {
           background-color: #333;
