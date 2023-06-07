@@ -27,7 +27,7 @@ export function getSortedWorksData() {
     };
   });
   // Sort posts by date
-  return allWorksData.sort((a, b) => {
+  return allWorksData.sort((a: any, b: any) => {
     if (a.date < b.date) {
       return 1;
     } else {
